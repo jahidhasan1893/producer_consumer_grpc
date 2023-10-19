@@ -11,9 +11,9 @@ import java.sql.ResultSet;
 
 public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase {
 
-    private static final String DB_URL = "jdbc:mysql://localhost/your_database_name";
-    private static final String DB_USERNAME = "your_database_username";
-    private static final String DB_PASSWORD = "your_database_password";
+    private static final String DB_URL = "jdbc:mysql://localhost/user";
+    private static final String DB_USERNAME = "root";
+    private static final String DB_PASSWORD = "admin1234";
 
     @Override
     public void register(User.RegisterRequest request, StreamObserver<User.RegisterResponse> responseObserver) {
