@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package com.x.grpc;
+
+service UserService {
+  rpc Register(RegisterRequest) returns (RegisterResponse);
+  rpc Login(LoginRequest) returns (LoginResponse);
+  rpc SetProfile(SetProfileRequest) returns (SetProfileResponse);
+  rpc ViewProfile(ViewProfileRequest) returns (ViewProfileResponse);
+  rpc UpdateProfile(UpdateProfileRequest) returns (UpdateProfileResponse);
+}
+
+message RegisterRequest {
+  string username = 1;
+  string password = 2;
+  string email = 3;
+}
+
+message RegisterResponse {
+  string message = 1;
+}
+
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  string message = 1;
+}
+
+message SetProfileRequest {
+  string username = 1;
+  string profileData = 2;
+}
+
+message SetProfileResponse {
+  string message = 1;
+}
+
+message ViewProfileRequest {
+  string username = 1;
+}
+
+message ViewProfileResponse {
+  string profileData = 1;
+}
+
+message UpdateProfileRequest {
+  string username = 1;
+  string updatedProfileData = 2;
+}
+
+message UpdateProfileResponse {
+  string message = 1;
+}
